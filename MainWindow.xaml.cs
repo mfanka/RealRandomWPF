@@ -22,5 +22,10 @@ namespace RealRandomWPF
 			InitializeComponent();
 
 		}
+
+		private void Button_Exit_Click(object sender, RoutedEventArgs e)
+		{
+			Application.Current.Shutdown();
+		}
 	}
 }
