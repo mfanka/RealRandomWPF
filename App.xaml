@@ -4,23 +4,39 @@
              xmlns:local="clr-namespace:RealRandomWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
-            <Style TargetType="{x:Type Button}">
-                <Setter Property="Background" Value="Green"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Background="{TemplateBinding Background}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-                <Style.Triggers>
-                    <Trigger Property="IsMouseOver" Value="True">
-                        <Setter Property="Background" Value="DarkGoldenrod"/>
-                    </Trigger>
-                </Style.Triggers>
-            </Style>
+        <!--Кнопка выхода-->
+        <Style x:Key="Button_Exit" TargetType="Button" >  
+            <Setter Property="Background" Value="Transparent"/><!--Прозрачный фон-->
+            <Setter Property="BorderThickness" Value="0"/><!--Обводка кнопки-->
+            <Setter Property="Visibility" Value="Visible"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <!--Место-->
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0,1,1,0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <!--Тригер на прозрачность-->
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="Name_Block" TargetType="TextBlock">
+            <!--Место-->
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Bookman Old Style"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
     </Application.Resources>
 </Application>
