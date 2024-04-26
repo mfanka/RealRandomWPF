@@ -1,0 +1,41 @@
+﻿<Page x:Class="RealRandomWPF.PageRR.ResultPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RealRandomWPF.PageRR"
+      mc:Ignorable="d" 
+      d:DesignHeight="525" d:DesignWidth="550">
+    
+    <Grid Background="#FF1B6886">
+        <Border Background="GhostWhite" BorderBrush="Silver" BorderThickness="1" CornerRadius="8,8,8,8" Grid.ColumnSpan="3" Grid.RowSpan="6"/>
+        <Image x:Name="num2" Height="250" Width="150" Source="/Resurs/Num2.png" RenderOptions.BitmapScalingMode="HighQuality" />
+        <Image x:Name="num3" Height="250" Width="150" Source="/Resurs/Num3.png"  RenderOptions.BitmapScalingMode="HighQuality" />
+        <Image x:Name="num1" Height="250" Width="150" Source="/Resurs/Num1.png"  RenderOptions.BitmapScalingMode="HighQuality" />
+        <TextBlock x:Name="ResultNumber" Style="{StaticResource StyleTextBlock}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,50" />
+        <Button x:Name="RepeatButton" Click="RepeatButton_Click" Style="{StaticResource GeneralButton}" Width="130" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,150">
+            <Image Source="/Resurs/Ezhe.png" Margin="3,0,3,0"  RenderOptions.BitmapScalingMode="HighQuality"></Image>
+        </Button>
+        <Button x:Name="BackButton" Click="BackButton_Click" Style="{StaticResource GeneralButton}" Width="130" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,50">
+            <Image Source="/Resurs/Back.png" Margin="3,0,3,0"  RenderOptions.BitmapScalingMode="HighQuality"></Image>
+        </Button>
+        <Image x:Name="LoadingImage" Source="/Resurs/Loading.png" Height="150" Width="150" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="rotate"
+                         CenterX="75"
+                         CenterY="75"/>
+            </Image.RenderTransform>
+            <Image.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard RepeatBehavior="Forever">
+                            <DoubleAnimation Storyboard.TargetName="rotate"
+                                     Storyboard.TargetProperty="Angle"
+                                     By="360" Duration="0:0:1.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Image.Triggers>
+        </Image>
+    </Grid>
+</Page>

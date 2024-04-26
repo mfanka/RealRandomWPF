@@ -6,16 +6,68 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resurs\Icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resurs\Avtor.png" />
+    <None Remove="Resurs\Back.png" />
     <None Remove="Resurs\Background.jpg" />
+    <None Remove="Resurs\Block1.png" />
+    <None Remove="Resurs\Block2.png" />
+    <None Remove="Resurs\Block3.png" />
+    <None Remove="Resurs\Block4.png" />
     <None Remove="Resurs\Exit.png" />
+    <None Remove="Resurs\Exit2.png" />
+    <None Remove="Resurs\Ezhe.png" />
+    <None Remove="Resurs\icon.ico" />
+    <None Remove="Resurs\Icons.png" />
+    <None Remove="Resurs\List1.png" />
+    <None Remove="Resurs\List2.png" />
+    <None Remove="Resurs\Loading.png" />
+    <None Remove="Resurs\Num1.png" />
+    <None Remove="Resurs\Num2.png" />
+    <None Remove="Resurs\Num3.png" />
+    <None Remove="Resurs\Text.png" />
+    <None Remove="Resurs\TopName.png" />
+    <None Remove="Resurs\TopName2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resurs\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resurs\Icons.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resurs\Avtor.png" />
+    <Resource Include="Resurs\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resurs\Back.png" />
+    <Resource Include="Resurs\Ezhe.png" />
+    <Resource Include="Resurs\List1.png" />
+    <Resource Include="Resurs\List2.png" />
+    <Resource Include="Resurs\Loading.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resurs\Background.jpg" />
+    <Resource Include="Resurs\Block1.png" />
+    <Resource Include="Resurs\Block2.png" />
+    <Resource Include="Resurs\Block3.png" />
+    <Resource Include="Resurs\Block4.png" />
     <Resource Include="Resurs\Exit.png" />
+    <Resource Include="Resurs\Exit2.png" />
+    <Resource Include="Resurs\Num1.png" />
+    <Resource Include="Resurs\Num2.png" />
+    <Resource Include="Resurs\Num3.png" />
+    <Resource Include="Resurs\Text.png" />
+    <Resource Include="Resurs\TopName.png" />
+    <Resource Include="Resurs\TopName2.png" />
   </ItemGroup>
 
 </Project>

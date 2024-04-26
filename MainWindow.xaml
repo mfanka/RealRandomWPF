@@ -5,26 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RealRandomWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="550" WindowStyle="None" ResizeMode="NoResize">
+        WindowStartupLocation="CenterScreen"
+        Title="RealRandom" Height="600" Width="550" WindowStyle="None" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="55"/>
+            <RowDefinition Height="75"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="Top" Grid.RowSpan="1" MouseLeftButtonDown="Top_MouseLeftButtonDown">
+        <Grid x:Name="Top" Grid.Row="0" MouseLeftButtonDown="Top_MouseLeftButtonDown">
             <Grid.Background>
                 <ImageBrush ImageSource="Resurs/Background.jpg" Stretch="UniformToFill" ></ImageBrush>
             </Grid.Background>
-            <Button x:Name="Button_Exit" Style="{StaticResource Button_Exit}"  Click="Button_Exit_Click" MouseEnter="Button_Exit_MouseEnter" MouseLeave="Button_Exit_MouseLeave" >
-                <StackPanel>
-                    <Image x:Name="Image_Exit" Visibility="Visible" Source="Resurs/Exit.png" Width="50"/>
-                </StackPanel>
-            </Button>
-            <TextBlock x:Name="NameBlock" Style="{StaticResource Name_Block}" Text="RealRandom"  />
+             <Button x:Name="Button_Exit" Style="{StaticResource Button_Exit}" Click="Button_Exit_Click" Width="70" Height="70" RenderOptions.BitmapScalingMode="HighQuality" Cursor="Hand" />
+            <Image Style="{StaticResource TopName}" Source="/Resurs/TopName.png" RenderOptions.BitmapScalingMode="HighQuality" Height="170" Width="285"/>
         </Grid>
         <Grid x:Name="Base" Grid.Row="2">
-            
+            <Frame x:Name="Windows" Source="/PageRR/InputPage.xaml" NavigationUIVisibility="Hidden" Panel.ZIndex="1" BorderBrush="#FF1B6886" BorderThickness="4,0,4,4" ></Frame>
+
         </Grid>
 
     </Grid>
+
 </Window>

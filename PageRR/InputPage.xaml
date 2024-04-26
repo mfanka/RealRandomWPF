@@ -1,0 +1,63 @@
+﻿<Page x:Class="RealRandomWPF.PageRR.InputPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RealRandomWPF.PageRR"
+      mc:Ignorable="d" 
+      d:DesignHeight="525" d:DesignWidth="550">
+
+    <Grid Background="#FF1B6886">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="238*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="GhostWhite" BorderBrush="Silver" BorderThickness="1" CornerRadius="8,8,8,8" Grid.ColumnSpan="3" Grid.RowSpan="6"/>
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3">
+            <Image Source="/Resurs/TopName2.png" HorizontalAlignment="Center" VerticalAlignment="Top" Height="144" Width="286" RenderOptions.BitmapScalingMode="HighQuality" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Background="Transparent" BorderBrush="Purple" BorderThickness="2" CornerRadius="8,8,8,8" Grid.RowSpan="2"/>
+            <Image Source="/Resurs/Block1.png" VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" RenderOptions.BitmapScalingMode="HighQuality" Margin="45,0,0,0" Grid.Column="0" />
+            <Image Source="/Resurs/Block2.png"   RenderOptions.BitmapScalingMode="HighQuality" Grid.Column="0" HorizontalAlignment="Center" Width="100" Margin="10,8,0,0"/>
+            <Image Source="/Resurs/Block3.png" HorizontalAlignment="Right" Margin="0,0,50,-5" Width="80" RenderOptions.BitmapScalingMode="HighQuality" Grid.Column="0"/>
+            <Border x:Name="BorderOne" Background="Transparent" BorderBrush="Purple" BorderThickness="1" CornerRadius="8,8,8,8" Grid.Row="1" Width="300" Height="40" Margin="0,0,0,5">
+                <TextBox x:Name="NumberOne" Style="{StaticResource TextBoxMy}" Grid.Row="1" Width="285" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" PreviewTextInput="TextBox_PreviewTextInput" ></TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="4" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Background="Transparent" BorderBrush="Purple" BorderThickness="2" CornerRadius="8,8,8,8" Grid.RowSpan="2"/>
+            <Image Source="/Resurs/Block1.png" VerticalAlignment="Center" HorizontalAlignment="Left" Width="100" RenderOptions.BitmapScalingMode="HighQuality" Margin="45,0,0,0" Grid.Column="0" />
+            <Image Source="/Resurs/Block4.png"   RenderOptions.BitmapScalingMode="HighQuality" Grid.Column="0" HorizontalAlignment="Center" Width="100" Margin="10,8,0,0"/>
+            <Image Source="/Resurs/Block3.png" HorizontalAlignment="Right" Margin="0,0,50,-5" Width="80" RenderOptions.BitmapScalingMode="HighQuality" Grid.Column="0"/>
+            <Border x:Name="BorberTwo" Background="Transparent" BorderBrush="Purple" BorderThickness="1" CornerRadius="8,8,8,8" Grid.Row="1" Width="300" Height="40" Margin="0,0,0,5">
+                <TextBox x:Name="NumberTwo" Style="{StaticResource TextBoxMy}" Grid.Row="1" Width="285" Height="35" HorizontalAlignment="Center" VerticalAlignment="Center" PreviewTextInput="NumberTwo_PreviewTextInput" ></TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="1">
+            <Button x:Name="ActionButton" Style="{StaticResource GeneralButton}" Width="200" Height="60" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" Click="ActionButton_Click" >
+                <Image Source="/Resurs/Text.png" Margin="5,0,5,0" RenderOptions.BitmapScalingMode="HighQuality" ></Image>
+            </Button>
+        </Grid>
+        <Button x:Name="InfoButton" Content="i" Grid.Column="2" Grid.Row="6" Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="6" Click="InfoButton_Click" />
+
+
+    </Grid>
+</Page>

@@ -19,9 +19,7 @@ namespace RealRandomWPF
 	{
 		public MainWindow()
 		{
-			
 			InitializeComponent();
-
 		}
 
 		private void Button_Exit_Click(object sender, RoutedEventArgs e)
@@ -36,14 +34,12 @@ namespace RealRandomWPF
 			this.DragMove();
 		}
 
-		private void Button_Exit_MouseEnter(object sender, MouseEventArgs e)
-		{
-			Image_Exit.Visibility = Visibility.Hidden;
-		}
+		
 
-		private void Button_Exit_MouseLeave(object sender, MouseEventArgs e)
-		{
-			Image_Exit.Visibility = Visibility.Visible;
-		}
+		
+
+		
+
+		
 	}
 }
